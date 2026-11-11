@@ -1,0 +1,128 @@
+:root {
+  --bg: #f4f5f7;
+  --panel: #ffffff;
+  --text: #1d2530;
+  --muted: #6b7482;
+  --line: #e2e5ea;
+  --accent: #2f6fed;
+  --brand: #0f3a2e;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12161d;
+    --panel: #1a2029;
+    --text: #e6ebf2;
+    --muted: #9aa6b6;
+    --line: #2c3542;
+    --accent: #6f9bff;
+    --brand: #0f3a2e;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+  font-size: 16px;
+  line-height: 1.8;
+  -webkit-text-size-adjust: 100%;
+}
+
+header {
+  background: var(--brand);
+  color: #fff;
+}
+
+.header-inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-inner img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+}
+
+.header-inner a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin: 0 0 4px;
+  line-height: 1.4;
+}
+
+.updated {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin: 0 0 24px;
+}
+
+section {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+section p { margin: 0 0 8px; }
+section p:last-child { margin-bottom: 0; }
+section ul { margin: 0; padding-left: 1.3em; }
+
+a { color: var(--accent); }
+
+.links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.links a {
+  display: block;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 16px 32px;
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+footer a { color: var(--muted); }
